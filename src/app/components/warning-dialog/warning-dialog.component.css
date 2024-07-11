@@ -1,0 +1,16 @@
+.container{
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
+.btn{
+    display: flex;
+    padding-left: 180px;
+    padding-top: 24px;
+    justify-content: space-between;
+    padding-right: 10px;
+}
+
+.cancel{
+    background-color: rgb(218, 210, 210);
+}

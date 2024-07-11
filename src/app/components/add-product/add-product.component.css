@@ -1,0 +1,28 @@
+.header{
+    margin-top: 10px;
+    margin-left: 30px;
+}
+.form-field{
+        margin-top: 25px;
+        margin-left: 20px;
+}
+
+mat-form-field{
+    margin-left: 10px;
+}
+
+.image-field{
+    width: 435px;
+}
+
+.submit{
+    padding-left: 360px;
+    padding-top: 25px;
+}
+
+.close{
+    display: flex;
+    margin-left: 440px;
+    margin-top: -36px;
+    cursor: pointer;
+}

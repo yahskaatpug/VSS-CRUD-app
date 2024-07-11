@@ -1,0 +1,31 @@
+<div class="header">
+    <h2><b>{{add_edit}} Product</b></h2>
+</div>
+<div class="close">
+    <mat-icon (click)="close()">close</mat-icon>
+</div>
+
+<div class="form-field">
+    <form [formGroup]="productForm" (ngSubmit)="submit()">
+        <mat-form-field appearance="outline">
+            <mat-label>Title</mat-label>
+            <input matInput placeholder="Add Title" formControlName="title">
+        </mat-form-field>
+
+
+        <mat-form-field appearance="outline">
+            <mat-label>Price</mat-label>
+            <input matInput placeholder="Add Price" formControlName="price">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="image-field">
+            <mat-label>Image</mat-label>
+            <input matInput placeholder="Image URL" formControlName="image">
+        </mat-form-field>
+
+        <div class="submit">
+            <button mat-flat-button color="primary" type="submit" [disabled]="!productForm.valid">Submit</button>
+        </div>
+    </form>
+
+</div>

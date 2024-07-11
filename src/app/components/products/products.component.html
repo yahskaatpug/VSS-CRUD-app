@@ -1,0 +1,28 @@
+<div>
+  <div class="header">
+    <input type="text" placeholder="Search your product here" id="searchProductInput"
+      (change)="filterProducts($event)" />
+    <!-- <button class="btn">Search</button> -->
+  </div>
+  <div class="btn top-right">
+    <button mat-flat-button color="primary" (click)="addProduct()">Add Product</button>
+  </div>
+  <div class="products">
+    <h2 style="padding-left: 46px;">Products</h2>
+    <ul id="product-list">
+
+      <li class="card" *ngFor="let product of filteredProducts; let i=index">
+        <img class="product-img" src={{product.image}}>
+        <p class="prod-title">{{product.title}}</p>
+        <p><b>{{product.price}}$</b></p>
+        <div class="rating">
+          <mat-icon *ngFor="let star of stars" class="star" [class.filled]="star <= product.rating?.rate">star</mat-icon>
+        </div>
+        <div class="buttons-container">
+          <button mat-fab class="edit-button" (click)="editProduct(product)"><mat-icon>edit</mat-icon></button>
+          <button mat-fab class="delete-button" (click)="deleteProduct(product._id)"><mat-icon>delete</mat-icon></button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
